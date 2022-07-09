@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+    <TextView
+        android:id="@+id/judulDashboard"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Dashboard IoT"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+    <TextView
+        android:id="@+id/judulMonitor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/judulDashboard"
+        android:layout_marginTop="20dp"
+        android:text="Monitor"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/textPembacaanSuhu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/judulMonitor"
+        android:text="Pembacaan Suhu :"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="normal" />
+    <TextView
+        android:id="@+id/valuePembacaanSuhu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/judulMonitor"
+        android:layout_toRightOf="@id/textPembacaanSuhu"
+        android:text="XXXXXX"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="normal" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/judulMonitor"
+        android:layout_marginTop="30dp"
+        android:id="@+id/containerTombol">
+
+        <TextView
+            android:id="@+id/judulTombol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kontrol Oven"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/tombolLampuOn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:padding="16dp"
+            android:text="ON" />
+
+        <Button
+            android:id="@+id/tombolLampuOff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_toEndOf="@id/tombolLampuOn"
+            android:padding="16dp"
+            android:text="OFF" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:id="@+id/containerChart"
+        android:layout_below="@id/containerTombol">
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:layout_width="200dp"
+            android:layout_height="300dp"
+            android:id="@+id/linechart"
+            />
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
